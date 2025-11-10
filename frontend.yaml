@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: vite-frontend
-          image: clarozzz/k8s-frontend:153
+          image: clarozzz/k8s-frontend:156
           ports:
             - containerPort: 3000
           env:
