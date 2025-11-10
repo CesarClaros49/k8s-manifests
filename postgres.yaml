@@ -7,7 +7,7 @@ spec:
     storage: 1Gi
   accessModes:
     - ReadWriteOnce
-  storageClassName: local-storage
+  storageClassName: manual
   hostPath:
     path: /mnt/data/postgres
 ---
@@ -21,7 +21,7 @@ spec:
   resources:
     requests:
       storage: 1Gi
-  storageClassName: local-storage
+  storageClassName: manual
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -69,4 +69,5 @@ spec:
   ports:
     - protocol: TCP
       port: 5432
+
       targetPort: 5432
