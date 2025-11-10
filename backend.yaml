@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: backend-dep
   annotations:
-    kubernetes.io/change-cause: "Anotacion del backend"
+    kubernetes.io/change-cause: "Update images to tag 165 on 2025-11-10 22:58:18"
   labels:
     app: backend-dep
 spec:
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: node-backend
-          image: clarozzz/k8s-backend:164
+          image: clarozzz/k8s-backend:165
           ports:
             - containerPort: 3001
           env:
