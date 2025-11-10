@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: node-backend
-          image: clarozzz/k8s-backend:163
+          image: clarozzz/k8s-backend:164
           ports:
             - containerPort: 3001
           env:
