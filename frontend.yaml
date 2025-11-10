@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend-dep
+  annotations:
+    kubernetes.io/change-cause: "Texto de ejemplo"
   labels:
     app: frontend-dep
 spec:
@@ -36,4 +38,5 @@ spec:
     - protocol: TCP
       port: 3000
       targetPort: 3000
+
   type: LoadBalancer
