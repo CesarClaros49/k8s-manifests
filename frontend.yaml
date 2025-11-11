@@ -4,6 +4,7 @@ metadata:
   name: frontend-dep
   annotations:
     kubernetes.io/change-cause: "Update jenkinsfile to deploy to k8s on 2025-11-11 16:46:49"
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
   labels:
     app: frontend-dep
 spec:
@@ -40,3 +41,4 @@ spec:
       targetPort: 3000
 
   type: LoadBalancer
+
