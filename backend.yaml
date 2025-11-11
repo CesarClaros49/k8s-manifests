@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: backend-dep
   annotations:
-    kubernetes.io/change-cause: "Update jenkinsfile on 2025-11-11 17:22:14"
+    kubernetes.io/change-cause: "Update jenkinsfile on 2025-11-11 17:25:35"
     argocd.argoproj.io/compare-options: IgnoreExtraneous
   labels:
     app: backend-dep
@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: node-backend
-          image: clarozzz/k8s-backend:178
+          image: clarozzz/k8s-backend:180
           ports:
             - containerPort: 3001
           env:
