@@ -3,8 +3,6 @@ kind: PersistentVolume
 metadata:
   annotations:
     argocd.argoproj.io/compare-options: IgnoreExtraneous
-  annotations:
-    argocd.argoproj.io/compare-options: IgnoreExtraneous
   name: postgres-pv
 spec:
   capacity:
@@ -91,3 +89,4 @@ spec:
       port: 5432
 
       targetPort: 5432
+
