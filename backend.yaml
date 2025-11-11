@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: backend-dep
   annotations:
-    kubernetes.io/change-cause: "Update jenkinsfile 9:03am on 2025-11-11 15:04:35"
+    kubernetes.io/change-cause: "Updated change cause message on 2025-11-11 15:11:59"
   labels:
     app: backend-dep
 spec:
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: node-backend
-          image: clarozzz/k8s-backend:168
+          image: clarozzz/k8s-backend:170
           ports:
             - containerPort: 3001
           env:
