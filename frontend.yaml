@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: frontend-dep
   annotations:
-    kubernetes.io/change-cause: "Agregadas nuevas funcionalidades on 2025-11-11 19:57:27"
+    kubernetes.io/change-cause: "Update App.tsx on 2025-11-11 20:09:34"
     argocd.argoproj.io/compare-options: IgnoreExtraneous
   labels:
     app: frontend-dep
@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: vite-frontend
-          image: clarozzz/k8s-frontend:200
+          image: clarozzz/k8s-frontend:201
           ports:
             - containerPort: 3000
           env:
