@@ -1,9 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
   name: backend-dep
   annotations:
-    kubernetes.io/change-cause: "Update jenkinsfile to deploy to k8s on 2025-11-11 16:46:49"
+    kubernetes.io/change-cause: "changes on 2025-11-11 17:14:00"
     argocd.argoproj.io/compare-options: IgnoreExtraneous
   labels:
     app: backend-dep
@@ -14,12 +16,14 @@ spec:
       app: backend-dep
   template:
     metadata:
+  annotations:
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
       labels:
         app: backend-dep
     spec:
       containers:
         - name: node-backend
-          image: clarozzz/k8s-backend:171
+          image: clarozzz/k8s-backend:173
           ports:
             - containerPort: 3001
           env:
@@ -37,6 +41,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
   name: backend-svc
 spec:
   selector:
