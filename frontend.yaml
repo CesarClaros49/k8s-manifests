@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: frontend-dep
   annotations:
-    kubernetes.io/change-cause: "Update jenkinsfile on 2025-11-11 17:58:49"
+    kubernetes.io/change-cause: "Update jenkinsfile on 2025-11-11 18:03:07"
     argocd.argoproj.io/compare-options: IgnoreExtraneous
   labels:
     app: frontend-dep
@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: vite-frontend
-          image: clarozzz/k8s-frontend:190
+          image: clarozzz/k8s-frontend:191
           ports:
             - containerPort: 3000
           env:
