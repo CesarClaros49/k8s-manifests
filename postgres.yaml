@@ -3,6 +3,8 @@ kind: PersistentVolume
 metadata:
   annotations:
     argocd.argoproj.io/compare-options: IgnoreExtraneous
+  annotations:
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
   name: postgres-pv
 spec:
   capacity:
@@ -16,6 +18,8 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
+  annotations:
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
   annotations:
     argocd.argoproj.io/compare-options: IgnoreExtraneous
   name: postgres-pvc
@@ -32,6 +36,8 @@ kind: Deployment
 metadata:
   annotations:
     argocd.argoproj.io/compare-options: IgnoreExtraneous
+  annotations:
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
   name: postgres
   labels:
     app: postgres
@@ -42,6 +48,8 @@ spec:
       app: postgres
   template:
     metadata:
+  annotations:
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
   annotations:
     argocd.argoproj.io/compare-options: IgnoreExtraneous
       labels:
@@ -70,6 +78,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
   annotations:
     argocd.argoproj.io/compare-options: IgnoreExtraneous
   name: postgres-svc
