@@ -14,10 +14,8 @@ spec:
       app: frontend-dep
   template:
     metadata:
-  annotations:
-    argocd.argoproj.io/compare-options: IgnoreExtraneous
-  annotations:
-    argocd.argoproj.io/compare-options: IgnoreExtraneous
+      annotations:
+        argocd.argoproj.io/compare-options: IgnoreExtraneous
       labels:
         app: frontend-dep
     spec:
@@ -37,8 +35,6 @@ kind: Service
 metadata:
   annotations:
     argocd.argoproj.io/compare-options: IgnoreExtraneous
-  annotations:
-    argocd.argoproj.io/compare-options: IgnoreExtraneous
   name: frontend-svc
 spec:
   selector:
@@ -49,5 +45,6 @@ spec:
       targetPort: 3000
 
   type: LoadBalancer
+
 
 
