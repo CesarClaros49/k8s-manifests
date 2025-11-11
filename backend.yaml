@@ -14,10 +14,8 @@ spec:
       app: backend-dep
   template:
     metadata:
-  annotations:
-    argocd.argoproj.io/compare-options: IgnoreExtraneous
-  annotations:
-    argocd.argoproj.io/compare-options: IgnoreExtraneous
+      annotations:
+        argocd.argoproj.io/compare-options: IgnoreExtraneous
       labels:
         app: backend-dep
     spec:
@@ -43,8 +41,6 @@ kind: Service
 metadata:
   annotations:
     argocd.argoproj.io/compare-options: IgnoreExtraneous
-  annotations:
-    argocd.argoproj.io/compare-options: IgnoreExtraneous
   name: backend-svc
 spec:
   selector:
@@ -54,5 +50,6 @@ spec:
       port: 3001
 
       targetPort: 3001
+
 
 
