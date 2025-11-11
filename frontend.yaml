@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: frontend-dep
   annotations:
-    kubernetes.io/change-cause: "Updated change cause message on 2025-11-11 15:11:59"
+    kubernetes.io/change-cause: "Update jenkinsfile to deploy to k8s on 2025-11-11 16:46:49"
   labels:
     app: frontend-dep
 spec:
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: vite-frontend
-          image: clarozzz/k8s-frontend:170
+          image: clarozzz/k8s-frontend:171
           ports:
             - containerPort: 3000
           env:
