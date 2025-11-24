@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: frontend-dep
   annotations:
-    kubernetes.io/change-cause: "Update jenkinsfile on 2025-11-24 20:02:49"
+    kubernetes.io/change-cause: "Update App.tsx on 2025-11-24 20:08:02"
   labels:
     app: frontend-dep
 spec:
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: vite-frontend
-          image: clarozzz/k8s-frontend:205
+          image: clarozzz/k8s-frontend:206
           ports:
             - containerPort: 3000
           env:
