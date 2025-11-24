@@ -4,7 +4,6 @@ metadata:
   name: backend-dep
   annotations:
     kubernetes.io/change-cause: "Update jenkinsfile on 2025-11-24 20:02:49"
-    argocd.argoproj.io/compare-options: IgnoreExtraneous
   labels:
     app: backend-dep
 spec:
@@ -14,8 +13,6 @@ spec:
       app: backend-dep
   template:
     metadata:
-      annotations:
-        argocd.argoproj.io/compare-options: IgnoreExtraneous
       labels:
         app: backend-dep
     spec:
@@ -39,8 +36,6 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  annotations:
-    argocd.argoproj.io/compare-options: IgnoreExtraneous
   name: backend-svc
 spec:
   selector:
@@ -50,6 +45,7 @@ spec:
       port: 3001
 
       targetPort: 3001
+
 
 
 
